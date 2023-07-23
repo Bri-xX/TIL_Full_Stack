@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./style.css";
 
 const CATEGORIES = [
@@ -45,19 +46,27 @@ const initialFacts = [
   },
 ];
 
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <span style={{ fontSize: "40px" }}>{count}</span>
+      <button className="btn btn-large" onClick={() => setCount((c) => c + 1)}>
+        +1
+      </button>
+    </div>
+  );
+}
+
 function App() {
-  const appTitle = "Today I Learned";
+  const [showForm, setShowForm] = useState(false);
+
   return (
     <>
-      {/*HEADER*/}
-      <header className="header">
-        <div className="logo">
-          <img src="logo.png" alt="Today I Learned Logo" />
-          <h1>{appTitle}</h1>
-        </div>
-        <button className="btn btn-large btn-open">Share a fact</button>
-      </header>
-      <NewFactForm />
+      <Header showForm={showForm} setShowForm={setShowForm} />
+
+      {showForm ? <NewFactForm /> : null}
       <main className="main">
         <CategoryFilter />
         <FactList />
@@ -66,12 +75,48 @@ function App() {
   );
 }
 
+function Header({ showForm, setShowForm }) {
+  const appTitle = "Today I Learned";
+  return (
+    <header className="header">
+      <div className="logo">
+        <img src="logo.png" alt="Today I Learned Logo" />
+        <h1>{appTitle}</h1>
+      </div>
+      <button
+        className="btn btn-large btn-open"
+        onClick={() => setShowForm((show) => !show)}
+      >
+        {showForm ? "Close" : "Share a fact"}
+      </button>
+    </header>
+  );
+}
+
 function NewFactForm() {
   return <form className="fact-form">new fact form</form>;
 }
 
 function CategoryFilter() {
-  return <aside>Category Filter</aside>;
+  return (
+    <aside>
+      <ul>
+        <li className="category">
+          <button className="btn btn-all-categories">All</button>
+        </li>
+        {CATEGORIES.map((cat) => (
+          <li key={cat.name} className="category">
+            <button
+              className="btn btn-category"
+              style={{ backgroundColor: cat.color }}
+            >
+              {cat.name}
+            </button>
+          </li>
+        ))}
+      </ul>
+    </aside>
+  );
 }
 
 function FactList() {
