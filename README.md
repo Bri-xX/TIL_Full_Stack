@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+# Today I Learned: Full-Stack Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Today I Learned is a full-stack website that allows users to share, learn, and discover short, concise pieces of information or knowledge they learned each day. This project is a single-page application (SPA) developed using ReactJS and Create-React-App boilerplate, with Supabase serving as the backend.
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+**Frontend:** ReactJS, built on top of the Create-React-App boilerplate.
+- This setup allows for rapid development and a modular approach to building user interfaces.
+- ReactJS is used for its component-based architecture, state management, and its robust ecosystem.
 
-### `npm start`
+**Backend:** Supabase, an open-source alternative to Firebase.
+- Supabase provides user authentication, real-time databases, instant APIs, and many more features.
+- It's an excellent option for serverless applications and fits well with the ReactJS frontend.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Getting Started
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+To run this project locally, follow the instructions below.
 
-### `npm test`
+**Prerequisites**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Ensure that you have the following installed on your local development machine:
+- Node.js >= 14.0.0
+- NPM >= 5.6.0
+- Git
 
-### `npm run build`
+**Clone the Repository**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+First, clone this repository to your local machine using `https://github.com/<your-github-username>/today-I-learned.git`.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+git clone https://github.com/<your-github-username>/today-I-learned.git
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Installation**
 
-### `npm run eject`
+Inside the cloned repository, install the required npm packages:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+npm install
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Environment Variables**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Next, create a `.env` file in the root of your project folder. Update this file with your Supabase URL and public anon key:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```env
+REACT_APP_SUPABASE_URL=your_supabase_url
+REACT_APP_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
 
-## Learn More
+**Run the Application**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Now, you can run the application in your local development environment:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm start
+```
 
-### Code Splitting
+Visit `http://localhost:3000` in your web browser. The application should be up and running.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Testing
 
-### Analyzing the Bundle Size
+Run the tests using the command below:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+npm test
+```
 
-### Making a Progressive Web App
+## Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+You can deploy the app using any hosting platform of your choice like Vercel, Netlify, AWS, etc. Make sure to set the environment variables as per your hosting provider's instructions.
 
-### Advanced Configuration
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-### Deployment
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+This project is licensed under the MIT License - see the `LICENSE.md` file for details.
 
-### `npm run build` fails to minify
+## Contact
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+If you have any questions, feel free to contact us. Enjoy coding!
+
+Remember, this documentation is a guide to get you started. It may not cover all the functionalities of the application. You're encouraged to explore and expand upon this documentation.
