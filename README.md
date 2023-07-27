@@ -73,6 +73,6 @@ You can deploy the app using any hosting platform of your choice like Vercel, Ne
 
 ## Contact
 
-If you have any questions, feel free to contact us. Enjoy coding!
+If you have any questions, feel free to contact me. Enjoy coding!
 
 Remember, this documentation is a guide to get you started. It may not cover all the functionalities of the application. You're encouraged to explore and expand upon this documentation.
