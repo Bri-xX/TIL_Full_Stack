@@ -25,10 +25,10 @@ Ensure that you have the following installed on your local development machine:
 
 **Clone the Repository**
 
-First, clone this repository to your local machine using `https://github.com/<your-github-username>/today-I-learned.git`.
+First, clone this repository to your local machine using `https://github.com/Bri-xX/TIL_Full_Stack.git`.
 
 ```bash
-git clone https://github.com/<your-github-username>/today-I-learned.git
+git clone https://github.com/Bri-xX/TIL_Full_Stack.git
 ```
 
 **Installation**
@@ -44,8 +44,8 @@ npm install
 Next, create a `.env` file in the root of your project folder. Update this file with your Supabase URL and public anon key:
 
 ```env
-REACT_APP_SUPABASE_URL=your_supabase_url
-REACT_APP_SUPABASE_ANON_KEY=your_supabase_anon_key
+REACT_APP_SUPABASEURL=your_supabase_url
+REACT_APP_SUPABASEKEY=your_supabase_anon_key
 ```
 
 **Run the Application**
@@ -70,13 +70,6 @@ npm test
 
 You can deploy the app using any hosting platform of your choice like Vercel, Netlify, AWS, etc. Make sure to set the environment variables as per your hosting provider's instructions.
 
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-## License
-
-This project is licensed under the MIT License - see the `LICENSE.md` file for details.
 
 ## Contact
 
