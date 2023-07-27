@@ -243,9 +243,9 @@ ul {
 }
 
 @media (max-width: 1064px) {
-  body {
-    /*padding: 32px 48px;*/
-  }
+  /*body {*/
+  /*padding: 32px 48px;*/
+  /*}*/
 
   .fact-form {
     flex-direction: column;
